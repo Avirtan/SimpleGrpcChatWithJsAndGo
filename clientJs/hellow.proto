@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option go_package = "github.com/avirtan/proto/hello";
+package hellow;
+// The greeting service definition.
+service Greeter {
+    rpc ListResponse(Request) returns (stream Response) {}
+    rpc Stream(stream Request) returns (stream Response) {}
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    // Sends another greeting
+    rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+  }
+  
+  // The request message containing the user's name.
+  message HelloRequest {
+    string name = 1;
+  }
+  
+  // The response message containing the greetings
+  message HelloReply {
+    string message = 1;
+  }
+  message TypeW{
+    string mtypew = 1;
+  }
+  message TypeS{
+    string mtypes = 1;
+  }
+  message Request {
+    oneof action{
+      TypeW typeW = 1;
+      TypeS typeS = 2;
+    }
+  }
+  message Response {
+    string message = 1;
+  }
