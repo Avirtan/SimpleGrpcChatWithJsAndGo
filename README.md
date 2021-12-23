@@ -1,9 +1,9 @@
-#grpc exemple simple chat with go and js
+# grpc exemple simple chat with go and js
 
 client go and js
 server go
 
-##use 
+## use 
 
 ```bash
 ./run.sh or copy first line and past in bash and run
