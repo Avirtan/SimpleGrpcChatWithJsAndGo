@@ -1,9 +1,10 @@
 # grpc exemple simple chat with go and js
 
 client go and js
+
 server go
 
-## use 
+## Use 
 
 ```bash
 ./run.sh or copy first line and past in bash and run
